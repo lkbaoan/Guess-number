@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+int main() 
+{
+  srand(time(0));
+  int random = rand() % 30;
+  int guess = 0;
+  cout << "Guess number from 0 to 30: ";
+  do
+  {
+    cin >> guess;
+    if (guess > random)
+    {
+      cout << "Lower!" << endl;
+    }
+    else if (guess <  random)
+    {
+      cout << "Higher!" << endl;
+    }
+  }
+  while(guess != random);
+  cout << "Correct!" << endl;
+}
